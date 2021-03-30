@@ -14,7 +14,7 @@ val Meta.helloWorld: CliPlugin
                     Transform.replace(
                         replacing = c,
                         newDeclaration =
-                        """|fun helloWorld(): String = "Hello ΛRROW Meta!"
+                        """|fun helloWorld3(): String = "Hello ΛRROW Meta 123 4!"
                |""".function.syntheticScope
                     )
                 }

@@ -27,12 +27,14 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+//        freeCompilerArgs = ["-Xplugin=${project.rootDir}/create-plugin/build/libs/create-plugin-all.jar"]
         freeCompilerArgs += "-Xplugin=${project.rootDir}/create-plugin/build/libs/create-plugin-all.jar"
-        //freeCompilerArgs += "-Xplugin=${project.rootDir}/custom-create-plugin/build/libs/custom-create-plugin-all.jar"
+//        freeCompilerArgs += "-Xplugin=${project.rootDir}/custom-create-plugin/build/libs/custom-create-plugin-all.jar"
     }
 }
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile) {
+//    compileTask -> compileTask.dependsOn ":custom-create-plugin:createNewPlugin"
     compileTask -> compileTask.dependsOn ":create-plugin:createNewPlugin"
 }
 

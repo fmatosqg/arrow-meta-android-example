@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
 
-        Toast.makeText(this, helloWorld(), Toast.LENGTH_LONG).show()
+        Toast.makeText(this, helloWorld3(), Toast.LENGTH_LONG).show()
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, helloWorld(), Snackbar.LENGTH_LONG)
+            Snackbar.make(view, helloWorld3(), Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
     }
